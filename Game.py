@@ -9,7 +9,6 @@ import Cellule
 class Game:
     def __init__(self, board):
         self.board = board
-        self.aliveCellules = 0
 
     def update(self):
         tempBoard = copy.deepcopy(self.board.matrix)
@@ -42,6 +41,5 @@ class Game:
                     tempBoard[x][y] = Cellule.State.ALIVE
                 elif neighbors > 3 or neighbors < 2:
                     tempBoard[x][y] = Cellule.State.DEAD
-                self.aliveCellules += neighbors
     
         self.board.matrix = tempBoard;

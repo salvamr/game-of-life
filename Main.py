@@ -13,7 +13,6 @@ from configparser import ConfigParser
 from Game import Game
 from pygame.locals import *
 from Board import Board
-from cgi import log
 
 def start():
     if (Path('config.ini').exists()):
